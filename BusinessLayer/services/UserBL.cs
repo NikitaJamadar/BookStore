@@ -21,6 +21,18 @@ namespace BusinessLayer.services
             {
                 return this.userRL.Register(user);
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        //Method for user login
+        public UserLogin Login(string Email, string Password)
+        {
+            try
+            {
+                return this.userRL.Login(Email, Password);
+            }
             catch (Exception)
             {
                 throw;
